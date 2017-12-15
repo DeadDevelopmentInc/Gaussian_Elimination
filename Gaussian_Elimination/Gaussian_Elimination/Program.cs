@@ -11,7 +11,7 @@ namespace Gaussian_Elimination
     {
         static void Main(string[] args)
         {
-            LU_Decomposition decomposition = new LU_Decomposition();
+             Gauss_Elimination gauss = new Gauss_Elimination();
 
             string source = "Matrix.txt";
 
@@ -59,7 +59,7 @@ namespace Gaussian_Elimination
                             if (from != 0)
                             {
                                 Console.WriteLine("Your output is");
-                                decomposition.ClcltLU_Dcmp(source, from, out vector);
+                                gauss.ClcltLU_Dcmp(source, from, out vector);
                                 foreach (double x in vector)
                                 {
                                     Console.Write(Math.Round(x, 5) + " ");

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SltnsLibrary
 {
-    public class LU_Decomposition
+    public class Gauss_Elimination
     {
 
         public void ClcltLU_Dcmp(string source, int inputType, out double[] X)
@@ -46,7 +46,7 @@ namespace SltnsLibrary
 
                 // получаем элемент главной диагонали, которым будем обнулять столбец
                 double dd = matrix.getValue(row, row);
-                for (int i = 0; i < matrix.getN(); i++)// высчитываем коэффициент 
+                for (int i = 0; i < colValues.Length; i++)// высчитываем коэффициент 
                 {
                     double k = colValues[i] / dd;
 
